@@ -51,7 +51,7 @@ function modificarEquipo() {
     let idEquipo = document.getElementById("idAModificar").value;
     let nombre = document.getElementById("nombreAModificar").value;
     let equipo = equipoAModificar;
-    equipo.nombre = nombre;
+    equipo.name = nombre;
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
          if (this.readyState == 4 && this.status == 200) {
@@ -99,7 +99,7 @@ function borrarEquipo() {
 
 function prepararModificacion(equipo) {
     document.getElementById("idAModificar").value = equipo.id;
-    document.getElementById("nombreAModificar").value = equipo.nombre;
+    document.getElementById("nombreAModificar").value = equipo.name;
 }
 
 function rellenarError(datosError, idDiv) {
